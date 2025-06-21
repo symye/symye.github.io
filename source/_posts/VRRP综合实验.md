@@ -111,7 +111,7 @@ S2
 
 ![one](../imgs/验证VRRP负载分担1.png)
 
-![one](../imgs/验证VRRP负载分2.png)
+![one](../imgs/验证VRRP负载担2.png)
 
 验证CRRP端口追踪与安全
 
