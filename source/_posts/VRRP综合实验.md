@@ -14,7 +14,7 @@ tags: VRRP
 
 ### 实验拓扑
 
-![one](../imgs/jinkesi.jpg)
+![one](../imgs/实验拓扑.png)
 
 ### 实验需求
 
@@ -105,12 +105,14 @@ S2
 
 验证MSTP负载分担
 
-![one](../imgs/jinkesi.jpg)
+![one](../imgs/验证MSTP负载分担.png)
 
 验证VRRP负载分担
 
-![one](../imgs/jinkesi.jpg)
+![one](../imgs/验证VRRP负载分担1.png)
+
+![one](../imgs/验证VRRP负载分2.png)
 
 验证CRRP端口追踪与安全
 
-![one](../imgs/jinkesi.jpg)
+![one](../imgs/验证CRRP端口追踪与安全.png)
