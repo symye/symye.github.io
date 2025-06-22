@@ -51,9 +51,9 @@ darkmode: false
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  small: /images/jinkesi.jpg
+  medium: /images/jinkesi.jpg
+  apple_touch_icon: /images/jinkesi.jpg
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 
@@ -101,6 +101,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  图床： /therspist/ || picture-o
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -174,11 +175,13 @@ social_icons:
 
 # Blog rolls
 links_settings:
-  icon: fa fa-globe
+  icon: link
+  title: 友链
   # Available values: block | inline
   layout: block
 
 links:
+  sy的博客: https://symye.github.io/
   #Title: https://example.com
 
 # Table of Contents in the Sidebar
@@ -386,9 +389,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
