@@ -42,6 +42,7 @@ S1
         port link-type trunk
         port trunk allow-pass vlan 2 to 4094
 ```  
+
 S2
 ```bash
     vlan batch 10 18 20
@@ -60,7 +61,9 @@ S2
         port tru
         nk allow-pass vlan 2 to 4094
 ```
+
 配置MST
+
 ```bash
 S1,S2,S3
     stp region-configuration 
@@ -76,7 +79,9 @@ S1,S2,S3
         stp instance 2 root primary
         stp instance 1 root seconday
 ```
+
 配置VRRP
+
 ```bash
 S1
     interface Vlanif10
