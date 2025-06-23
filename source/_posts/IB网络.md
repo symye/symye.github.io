@@ -51,7 +51,7 @@ IPoIB 支持创建/移除子接口
 
 ![one](../imgs/2025.6.23-3.png)
 
-### [NVIDIA SM](https://docs.nvidia.com/networking/display/mlnxofedv23102131lts/nvidia+sm)
+### [NVIDIA SM] (https://docs.nvidia.com/networking/display/mlnxofedv23102131lts/nvidia+sm)
 NVIDIA SM 是符合 InfiniBand 标准的子网管理器 (SM)。它以名为“opensm”的固定流程可执行文件的形式提供，并附带一个名为 osmtest 的测试应用程序。NVIDIA SM 根据 InfiniBand 架构规范章节实施符合 InfiniBand 标准的 SM：管理模型、子网管理和子网管理.
 
 OpenSM 是符合 InfiniBand 规范的子网管理器和子网管理员，运行在 NVIDIA OFED 堆栈之上。OpenSM 执行 InfiniBand 规范所需的任务，以初始化 InfiniBand 硬件。每个 InfiniBand 子网必须运行一个 SM。
