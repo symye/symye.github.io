@@ -25,8 +25,10 @@ tags: VRRP
 
 ### 实验解法
 
-S1
+配置（互联配置略）
+
 ```bash
+S1
     vlan batch 10 17 20 
     interface eth 1 
         port link-type trunk
