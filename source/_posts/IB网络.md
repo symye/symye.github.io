@@ -66,12 +66,9 @@ opensm 命令示例
 
 ![one](../imgs/2025.6.23-4.png)
 
-- 其它功能见官方文档：NVIDIA MLNX OFED
+- 其它功能见官方文档：[NVIDIA MLNX OFED] (https://docs.nvidia.com/networking/display/mlnxofedv23070512/introduction)
 
-
-
-
-
+  
 
 
 
