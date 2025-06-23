@@ -41,7 +41,7 @@ S1
     interface g0/0/23 
         port link-type trunk
         port trunk allow-pass vlan 2 to 4094
-```  
+```
 
 S2
 ```bash
