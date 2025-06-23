@@ -19,6 +19,13 @@ body {
   min-height: 100%;
   position: relative;
   transition: padding $transition-ease;
+    
+    +tablet-mobile() {
+    // Remove the padding of body when the sidebar is open.
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
 
   if (hexo-config('body_scrollbar.overlay')) {
     overflow-x: hidden;
