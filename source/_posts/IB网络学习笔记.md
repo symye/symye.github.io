@@ -4,6 +4,8 @@ layout: pags
 title: IB网络学习笔记
 date: 2025-06-23 15:23:54
 tags: IB网络
+categories: 
+- InfiniBand
 ---
 
 ### why(为什么出现了 IB 网络？背景？它解决了什么问题)
