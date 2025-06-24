@@ -25,6 +25,8 @@ categories:
 
 ![网卡描述](../imgs/2025.6.24-2.png)
 
+<!-- more -->
+
 安装IB网卡驱动
 
 - [驱动下载链接1](https://network.nvidia.com/products/infiniband-drivers/linux/mlnx_ofed/)
