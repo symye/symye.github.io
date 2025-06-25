@@ -1,7 +1,7 @@
 ---
 # IB网络笔记
 layout: pags
-title: IB网络网卡驱动安装
+title: IB网卡性能测试
 date: 2025-06-23 15:23:54
 tags: IB网络
 categories: 
