@@ -33,6 +33,8 @@ ib_write_bw -a -F  192.168.192.2 -d mlx5_0 --report_gbits
 
 ![命令](../imgs/2025.6.24-11.png)
 
+<!-- more -->
+
 ## IB诊断常用命令
 
 ### 查看IB网卡
