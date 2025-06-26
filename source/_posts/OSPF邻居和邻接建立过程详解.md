@@ -17,6 +17,7 @@ categories:
            发送Hello，但未收到邻居的Hello的状态
 - Init：邻居首次收到本地产生的Hello  
         描述对端信息
+        <!-- more -->        
 - 2-way：接收的HELLO报文中包含自身的Router-id  
           router-id确认方式：基于手工指定，基于本地环回，基于本地物理接口
         基于网络类型DR/BDR选举
