@@ -5,7 +5,7 @@ title: OSPF基础概念
 date: 2025-06-23 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF]
+- [HCIP,OSPF基本概念]
 ---
 
 ### OSPF基本信息
@@ -50,18 +50,18 @@ dis ospf abr-asbr
 - OSPF网络类型:
 1. 部署目的：适应网络拓扑
 
-！[图文](../imgs/2025.6.25-1.png)
+！[图文](../imgs/2025.6.25-2.png)
 
   NBMA网络类型需要互指邻居
 2. 配置接口网络类型
 
-！[图文](../imgs/2025.6.25-1.png)
+！[图文](../imgs/2025.6.25-3.png)
 
 3. Next-hop变化
 MA网络不变；P2MP会改变且产生32位主机路由
 4. 查看接口OSPF网络类型
 
-！[图文](../imgs/2025.6.25-1.png)
+！[图文](../imgs/2025.6.25-4.png)
 
 5. 邻居建立与介质访问方式相关  
 （展开讲解比较复杂）放在实验文章中，见链接[DR/BDR实验]()
@@ -74,10 +74,125 @@ MA网络不变；P2MP会改变且产生32位主机路由
 
 - LSA实验拓扑：
 
-！[图文](../imgs/2025.6.25-1.png)
+！[图文](../imgs/2025.6.25-5.png)
 
 - 区域内LSA
-1. LAS1（路由器LSA）
+1. LAS1（路由器LSA）  
+   由每台区域内路由器产生（数量：1）  
+   传递范围：区域内  
+   描述内容：链路ID,接口IP或掩码，链路类型，链路开销  
+   
+2. LSA2(网络LSA)  
+   描述MA网络连接的路由器与链路的掩码  
+   由DR通告MA网络结构  
+   传递范围：区域内  
+   Link State ID：DR的IP地址    
+   MA网络前缀：LS ID+Net mask
+
+！[图文](../imgs/2025.6.25-6.png)
+  
+3. LSA3（区域间LSA）  
+   描述OSPF区域间前缀与掩码  
+   传递范围：OSPF整个自制系统  
+   ABR通告  
+   ABR不传递通过非骨干区域接收的LSA3  
+   查看LSA3
+
+   ```bash
+   dis ospf lsbd summary
+   ```
+
+！[图文](../imgs/2025.6.25-7.png)
+
+4. LSA4 (边界LSA)  
+   描述抵达ASBR路由 ，即ASBR路由器ID  
+   传递范围：OSPF自制系统  
+   由ABR产生  
+   查看LSA4
+   
+   ```bash
+   dis ospf lsdb asbr
+   ```
+ ！[图文](../imgs/2025.6.25-8.png)
+
+5. LSA5（外部LSA）  
+   描述非OSPF网络路由
+   由ASBR产生
+   传递范围：OSPF自制系统  
+   查看LSA5
+
+   ```bash
+   dis ospf lsdb ase
+   ```
+
+ ！[图文](../imgs/2025.6.25-9.png)
+
+ 6. LSA7  
+   基于NSSA区域描述外部网络
+   传递范围：NSSA区域
+   ABR（较大路由器ID）执行LSA7->LSA5  
+   查看LSA7
+
+   ```bash
+   dis ospf lsdb nssa
+   ```
+ ！[图文](../imgs/2025.6.25-10.png)
+
+- LSA同步
+  1. LSA更新触发条件  
+    网络拓扑变化：(1) 链路的UP/DOWN (2)链路开销改变  
+    网络拓扑稳定：（1）周期更新 (2)：时间间隔：30min
+  2. 接受到不存在的LSA  
+    接受并泛洪此LSA  
+    判定依据：LS类型，Link ID，通告者
+  3. 接受到已存在的LSA  
+    LSA区分机制：LSA ID ,LSA 类型，LSA通告者  
+    判定依据：1.基于序列号  2.LSA生存时间 3.校验和  
+
+### OSPF虚连接
+
+- OSPF部署需求：OSPF要求所有非骨干区域必须与骨干区域保持连通，并且骨干区域之间也要保持连通。
+- 穿越区域限制：不支持穿越NSSA，不支持穿越Stub，不支持穿越Area 0
+- 在穿越区域的ABR之间设置
+- 互指对方的路由器ID
+- Vlink保障骨干区域连续与Vlink环路场景：[虚连接实验]()
+  
+### OSPF路由
+
+- OSPF路由类型
+  1. OSPF本区域路由：Transit ，Stub ，Intra Area
+  2. OSPF区域间路由：Inter-area
+  3. OSPF外部路由  
+       Type1：OSPF外部路由，沿途累加Metric  
+       Type2(default)：OSPF外部路由默认类型，沿途不累加Metric  
+       表示方式：O_ASE  
+  4. OSPF NSSA区域引入外部路由：表示方式：O_NSSA
+  5. 路由类型顺序：区域内路由>区域间路由>外部类型1(ON1,OE1)>外部类型2(ON2,OE2)  
+       同种类型LSA7与LSA5路由比较  
+       LSA5与LSA7比较实验：[实验]()
+- 外部路由引入： 
+   alway：无需本地存在缺省路由，即可注入默认路由  
+   metric：设置注入路由的度量值  
+   metric-type：设置注入路由的类型（O E1, O E2） 
+   默认外部类型2，度量值为1  
+
+
+  
+
+
+
+
+
+    
+
+
+
+
+
+   
+
+
+   
 
 
 
