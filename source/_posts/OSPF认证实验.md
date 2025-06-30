@@ -5,7 +5,7 @@ title: OSPF认证实验
 date: 2025-06-29 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF安全] 
+- [HCIP,1.4OSPF安全] 
 ---
 
 ### OSPF认证实验

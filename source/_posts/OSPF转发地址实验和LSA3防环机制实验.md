@@ -5,7 +5,7 @@ title: OSPF转发地址实验
 date: 2025-06-27 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF路径选择]
+- [HCIP,1.2OSPF路径选择]
 ---
 
 ### OSPF转发地址实验

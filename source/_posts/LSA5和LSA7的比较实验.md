@@ -5,7 +5,7 @@ title: LSA5和LSA7的比较实验
 date: 2025-06-25 14:25:54
 tags: Network
 categories: 
-- [HCIP,OSPF基本概念]
+- [HCIP,1.1OSPF基本概念]
 ---
 
 ### LSA5与LSA7比较

@@ -5,7 +5,7 @@ title: OSPF邻居和邻接建立过程详解
 date: 2025-06-25 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF基本概念]
+- [HCIP,1.1OSPF基本概念]
 ---
 
 ### 邻居建立过程详解 

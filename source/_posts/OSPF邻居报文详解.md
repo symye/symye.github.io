@@ -5,7 +5,7 @@ title: OSPF信息类型详解
 date: 2025-06-23 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF基本概念]
+- [HCIP,1.1OSPF基本概念]
 ---
 
 ### Hello

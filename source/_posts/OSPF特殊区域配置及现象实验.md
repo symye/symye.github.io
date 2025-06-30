@@ -5,7 +5,7 @@ title: OSPF特殊区域配置及现象实验
 date: 2025-06-28 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF LSDB优化] 
+- [HCIP,1.3OSPF LSDB优化] 
 ---
 
 ### OSPF特殊区域配置及现象实验
