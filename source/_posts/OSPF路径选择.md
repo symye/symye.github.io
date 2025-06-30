@@ -5,7 +5,7 @@ title: OSPF路径选择
 date: 2025-06-27 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF路径选择]
+- [HCIP,1.2OSPF路径选择]
 ---
 
 ### OSPF路径选择
@@ -31,8 +31,7 @@ LoopBack接口Cost=0（华为）
 
 - 度量值=沿途路径之和
 - 实验：验证优先级与开销修改
-   1. 修改优先级与开销实现路径控制：[优先级与开销修改实验]()
-
+   1. 修改优先级与开销实现路径控制：[优先级与开销修改实验](https://symye.github.io/2025/06/27/%E4%BC%98%E5%85%88%E7%BA%A7%E4%B8%8E%E5%BC%80%E9%94%80%E4%BF%AE%E6%94%B9%E5%AE%9E%E9%AA%8C/)
 - OSPF转发地址
 1. 影响转发路径与开销
 2. 转发地址必须OSPF路由可达，相关前缀才能生效
@@ -49,8 +48,8 @@ LoopBack接口Cost=0（华为）
 -  FA地址填充意义  
      优化选路场景  
      防环场景  
-- OSPF转发地址实验：[OSPF转发地址实验]()  
-
+- OSPF转发地址实验：[OSPF转发地址实验](https://symye.github.io/2025/06/27/OSPF%E8%BD%AC%E5%8F%91%E5%9C%B0%E5%9D%80%E5%AE%9E%E9%AA%8C%E5%92%8CLSA3%E9%98%B2%E7%8E%AF%E6%9C%BA%E5%88%B6%E5%AE%9E%E9%AA%8C/) 
+ 
 ### OSPF防环机制
 
 - 非骨干区域必须通过骨干区域实现通信
@@ -62,7 +61,7 @@ LoopBack接口Cost=0（华为）
 
 ![命令](../imgs/OSPF/ABR防环6.27.png)
 
-- 验证LSA3防环机制：[验证LSA3防环机制实验]()
+- 验证LSA3防环机制：[验证LSA3防环机制实验](https://symye.github.io/2025/06/27/OSPF%E8%BD%AC%E5%8F%91%E5%9C%B0%E5%9D%80%E5%AE%9E%E9%AA%8C%E5%92%8CLSA3%E9%98%B2%E7%8E%AF%E6%9C%BA%E5%88%B6%E5%AE%9E%E9%AA%8C/)
 
 - LSA1与LSA4比较机制
 1. 场景1：同区域（骨干与非骨干）内LSA1与LSA4比较  

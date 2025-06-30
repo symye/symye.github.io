@@ -5,7 +5,7 @@ title: ISIS原理描述
 date: 2025-06-29 15:23:54
 tags: Network
 categories: 
-- [HCIP,ISIS原理描述] 
+- [HCIP,2.2ISIS原理描述] 
 ---
 
 ### IS-IS邻居建立
@@ -160,6 +160,69 @@ isis
 ```
 
 ### LSP同步
+
+####  LSP报文结构
+
+![命令](../imgs/ISIS/LSP报文.png)
+
+- PDU Length：PDU的总长度，以字节为单位
+- Remaining Lifetime：LSP的生存时间，以秒为单位
+- LSP ID：由三部分组成，Syetem ID，伪节点ID（一字节）和LSP分片后的编号（一字节）
+- Sequency Number：LSP的序列号
+- Checksum：LSP校验和
+- P（Partition Repair）：仅与L2 LSP 有关，表示路由器是否支持自动修复区域分割---类似虚链路功能（ISIS不支持）
+- ATT（Attachment）：由L12路由器产生，用来指明始发路由器是否与其他区域相连
+- OL（LSDB Overload）：过载标志位
+- IS Type：生成LSP的路由器的类型---用来指明是Level-1还是Level-2路由器
+
+#### P2P LSP交互过程
+
+1. 互相交互CSNP：仅通告一次
+2. 发送PSNP作为请求与接收LSP确认
+3. 接收到剩余时间为0，则路由撤销并泛洪
+4. PSNP序列号0：表示请求，否则为确认
+
+#### MA LSP交互过程
+
+1. 相关报文类型
+   -  CSNP---仅DIS产生,功能类似OSPF DD
+   -  PSNP---功能类似OSPF LSR
+   -  LSP---功能类似OSPF LSU
+2. LSP操作---LSP产生的触发条件
+   - 邻居UP或DOWN
+   - IS-IS相关接口UP或DOWN
+   - 引入的IP路由发生变化
+   - 区域间的IP路由发生变化
+   - 接口修改metric值
+   - 周期性更新
+3. LSP比较参数
+   - 本地是否存在相应LSP
+   - 比较序列号
+   - 检查剩余时间为0
+   - 选择校验和较
+
+### ISIS区域间路由传递
+
+通常同一区域内的节点，LSDB同步      
+默认L2的路由无法进入L1，L1的路由可以进入L2      
+缺省情况
+-  L2->L1----- L12向L1通过LSP（其中ATT=1）
+-  L1->L2-----L12转换L1的路由为L2路由器通告到L2区域
+       
+ISIS路由渗透        
+- L12泄露部分明细路由到L1，实现路径优化
+- 防环机制---添加UP/DOWN Flag
+
+查看UP/DOWN FLAG
+
+![命令](../imgs/ISIS/查看FLAG.png)
+
+查看路由泄露
+
+![命令](../imgs/ISIS/查看路由泄露.png)
+
+
+
 
 
 

@@ -5,7 +5,7 @@ title: OSPF诊断
 date: 2025-06-29 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF诊断] 
+- [HCIP,1.5OSPF诊断] 
 ---
 
 ### 邻居关系无法建立

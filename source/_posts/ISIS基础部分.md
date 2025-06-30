@@ -5,7 +5,7 @@ title: ISIS基础
 date: 2025-06-29 15:23:54
 tags: Network
 categories: 
-- [HCIP,ISIS基础] 
+- [HCIP,2.1ISIS基础] 
 ---
 
 ### 中间系统到中间系统

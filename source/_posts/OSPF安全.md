@@ -5,7 +5,7 @@ title: OSPF安全
 date: 2025-06-29 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF安全] 
+- [HCIP,1.4OSPF安全] 
 ---
 
 ### OSPF认证
@@ -47,7 +47,7 @@ categories:
 ![命令](../imgs/OSPF/查看密文认证.png)
 
 
-- 实验：[OSPF认证实验]()
+- 实验：[OSPF认证实验](https://symye.github.io/2025/06/29/OSPF%E8%AE%A4%E8%AF%81%E5%AE%9E%E9%AA%8C/)
 
 ### OSPF收敛调优
 

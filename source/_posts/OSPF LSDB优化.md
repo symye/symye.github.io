@@ -5,7 +5,7 @@ title: OSPF LSDB优化
 date: 2025-06-28 15:23:54
 tags: Network
 categories: 
-- [HCIP,OSPF LSDB优化] 
+- [HCIP,1.3OSPF LSDB优化] 
 ---
 
 ### OSPF区域类型
