@@ -134,5 +134,44 @@ categories:
 
 - 注：BGP路由更新仅支持触发，增量更新
 
-[BGP邻居建立实验]() 
+[BGP邻居建立实验](https://symye.github.io/2025/07/01/BGP%E9%82%BB%E5%B1%85%E5%BB%BA%E7%AB%8B%E5%AE%9E%E9%AA%8C/) 
+
+### BGP路由加载
+
+#### 加载方式
+
+1. Import方式是协议类型，将RIP、OSPF、ISIS等协议的路由引入到BGP路由表中。
+2. Network方式是逐条将IP路由表已经存在的路由引入到BGP路由表中，比Import方式更精确
+3. 使用BGP聚合创建路由
+
+#### 查看BGP路由表
+
+![命令](../imgs/BGP/查看BGP路由表.png)
+
+#### 查看BGP路由条目详情
+
+![命令](../imgs/BGP/查看BGP路由详情.png)
+
+![命令](../imgs/BGP/路由详细条目.png)
+
+#### 配置
+
+- 通过Network方式引入
+
+```bash
+bgp 100          
+   network  155.1.1.1 32   //逐条匹配
+```
+
+- 通过import方式引入    //通过策略可同时引入多条
+
+```bash
+ip ip-prefix NET150 index 10 permit 150.1.0.0 16 gr 32
+route-policy ISIS->BGP permit node 10
+        if-match ip-prefix NET150
+bgp 100
+  import-router isis 1 route-policy ISIS->BGP
+```
+
+
 

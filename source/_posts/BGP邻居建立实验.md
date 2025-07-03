@@ -1,5 +1,5 @@
 ---
-# HCIP-ISIS
+# HCIP-BGP
 layout: pags
 title: BGP邻居建立实验
 date: 2025-07-01 12:29:54
@@ -57,7 +57,7 @@ R4
 
 - 查看BGP邻居
 
-![命令](../imgs/BGP/查看BGP邻居状态.png)
+![命令](../imgs/BGP/查看bgp邻居状态.png)
 
 - 查看BGP能力值
 
