@@ -1,11 +1,11 @@
 ---
-# VRRP综合实验
+# HCIP-VRRP
 layout: pags
 title: VRRP综合实验
-date: 2025-06-20 01:23:54
-tags: Network
+date: 2025-07-08 16:24:40
+tags: vrrp综合实验
 categories: 
-- Network
+- [HCIP,8.1VRRP]
 ---
 
 ### 环境描述

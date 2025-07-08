@@ -5,7 +5,7 @@ title: RSTP
 date: 2025-07-06 10:29:40
 tags: Network
 categories: 
-- [HCIP,7.2RSTP]
+- [HCIP,7.1STP]
 ---
 
 ### RSTP（802.1W）

@@ -5,7 +5,7 @@ title: MSTP
 date: 2025-07-07 13:24:40
 tags: Network
 categories: 
-- [HCIP,7.3MSTP]
+- [HCIP,7.1STP]
 ---
 
 ### MAST(802.1s)
