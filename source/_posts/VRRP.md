@@ -3,7 +3,7 @@
 layout: pags
 title: VRRP
 date: 2025-07-08 11:24:40
-tags: vrrp
+tags: Network
 categories: 
 - [HCIP,8.1VRRP]
 ---

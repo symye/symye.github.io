@@ -3,7 +3,7 @@
 layout: pags
 title: VRRP综合实验
 date: 2025-07-08 16:24:40
-tags: vrrp综合实验
+tags: Network
 categories: 
 - [HCIP,8.1VRRP]
 ---
