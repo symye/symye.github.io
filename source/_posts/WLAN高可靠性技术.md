@@ -5,7 +5,7 @@ title: 高可靠性技术
 date: 2025-07-11 10:24:45
 tags: Network
 categories: 
-- [HCIP,11.1大型WLAN组网]
+- [HCIP,B.1大型WLAN组网]
 ---
 
 ### 高可靠技术
