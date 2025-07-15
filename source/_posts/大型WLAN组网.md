@@ -5,7 +5,7 @@ title: 大型WLAN组网
 date: 2025-07-10 8:24:40
 tags: Network
 categories: 
-- [HCIP,11.1大型WLAN组网]
+- [HCIP,B.1大型WLAN组网]
 ---
 
 ### 大型WLAN组网概述
