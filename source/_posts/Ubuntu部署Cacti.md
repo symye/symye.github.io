@@ -256,7 +256,7 @@ UPDATE data_source_profiles_rra SET `steps`=1,`rows`=9999, `timespan`=2678400 WH
 
 修改完成后，重建poller缓存（如果是先修改，后加入设备则不需要）
 
-其他参数调整查阅Cacti配置文档
+其他参数调整查阅Cacti配置调优文档
 
 ![命令](../imgs/zabbix/Cacti.png)
 
