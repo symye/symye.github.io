@@ -66,7 +66,7 @@ ospf 1
 
 ![命令](../imgs/OSPF/OSPF区域类型与LSA关系.png)
 
-- 实验:[特殊区域配置及现象实验]()
+- 实验:[特殊区域配置及现象实验](https://symye.github.io/2025/06/28/OSPF%E8%B7%AF%E7%94%B1%E8%BF%87%E6%BB%A4%E5%AE%9E%E9%AA%8C/)
 
 ### OSPF路由汇总
 
