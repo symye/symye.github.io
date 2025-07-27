@@ -18,7 +18,7 @@ categories:
 - 缺点：必须设备同时支持IPV4/IPV6
 - 配置
 
-![命令](../imgs/IPv6过渡技术/双栈.png)
+![命令](../imgs/IPV6过渡技术/双栈.png)
 
 <!-- more -->
 #### 隧道技术
@@ -38,10 +38,10 @@ categories:
 
 实验配置（本章配置都在图中，就不另外贴出来了）
 
-![命令](../imgs/IPv6过渡技术/ipv6-ipv4拓扑配置图.png)
+![命令](../imgs/IPV6过渡技术/ipv6-ipv4拓扑配置图.png)
 
 
-![命令](../imgs/IPv6过渡技术/验证IPV6-IPV4-ISIS.png)
+![命令](../imgs/IPV6过渡技术/验证IPV6-IPV4-ISIS.png)
 
 
 2. IPv6 over IPv4 GRE隧道
@@ -50,10 +50,10 @@ categories:
 - 转发机制同IPv6 over IPv4手动隧道
 
 
-![命令](../imgs/IPv6过渡技术/IPV6-IPV4GRE.png)
+![命令](../imgs/IPV6过渡技术/IPV6-IPV4GRE.png)
 
 
-![命令](../imgs/IPv6过渡技术/验证IPV6GRE.png)
+![命令](../imgs/IPV6过渡技术/验证IPV6GRE.png)
 
 
 
@@ -69,20 +69,20 @@ categories:
     - 这个报文被路由器从隧道口发出后，在IPv4的网络中被路由转发到目的地，也就是R3。R3收到报文后，进行解封装，把其中的IPv6报文取出，送给IPv6协议栈进行处理
     - R3返回R1的报文也是按照这个过程来进行的
 
-![命令](../imgs/IPv6过渡技术/IPV4兼容IPV6自动隧道配置.png)
+![命令](../imgs/IPV6过渡技术/IPV4兼容IPV6自动隧道配置.png)
 
 
-![命令](../imgs/IPv6过渡技术/验证自动隧道ipv6toipv4.png)
+![命令](../imgs/IPV6过渡技术/验证自动隧道ipv6toipv4.png)
 
 
 2. 6to4隧道
 
-![命令](../imgs/IPv6过渡技术/6to4自动隧道拓扑配置.png)
+![命令](../imgs/IPV6过渡技术/6to4自动隧道拓扑配置.png)
 
 
 - 6to4地址格式
 
-![命令](../imgs/IPv6过渡技术/6to4地址格式.png)
+![命令](../imgs/IPV6过渡技术/6to4地址格式.png)
 
 - 6to4地址的网络前缀长度为64 bit
   - 前48 bit（2002: a.b.c.d）被分配给路由器上的IPv4地址决定了，用户不能改变
@@ -95,12 +95,12 @@ categories:
 
 3. ISATAP隧道
 
-![命令](../imgs/IPv6过渡技术/isatap自动隧道拓扑配置.png)
+![命令](../imgs/IPV6过渡技术/isatap自动隧道拓扑配置.png)
 
 - ISATAP隧道同样使用了内嵌IPv4地址的特殊IPv6地址形式，用IPv4地址做为接口标识
 - ISATAP接口标识格式
 
-![命令](../imgs/IPv6过渡技术/ISATAP接口标识格式.png)
+![命令](../imgs/IPV6过渡技术/ISATAP接口标识格式.png)
 
 - ISATAP地址前64位：通过向ISATAP路由器发送请求来得到的，它可以进行地址自动配置。在ISATAP隧道的两端设备之间可以运行NDP
 - ISATAP接口标识解释
@@ -114,24 +114,24 @@ categories:
 
 实验配置
 
-![命令](../imgs/IPv6过渡技术/6pe实验配置.png)
+![命令](../imgs/IPV6过渡技术/6pe实验配置.png)
 
 
 验证底层环境
 
 
-![命令](../imgs/IPv6过渡技术/6pe验证底层环境.png)
+![命令](../imgs/IPV6过渡技术/6pe验证底层环境.png)
 
 
-![命令](../imgs/IPv6过渡技术/6pe验证BGP.png)
+![命令](../imgs/IPV6过渡技术/6pe验证BGP.png)
 
 
-![命令](../imgs/IPv6过渡技术/验证报文6pe.png)
+![命令](../imgs/IPV6过渡技术/验证报文6pe.png)
 
 
 5. 6VPE
 
-![命令](../imgs/IPv6过渡技术/6vpe拓扑配置.png)
+![命令](../imgs/IPV6过渡技术/6vpe拓扑配置.png)
 
 
 #### IPV6转换技术
@@ -149,14 +149,14 @@ NAT64前缀分为两种形式
 - 知名前缀：即64:FF9B::/96，缺省情况下已存在，无需配置
 -  自定义前缀：前缀长度为32、40、48、56、64或96
 
-![命令](../imgs/IPv6过渡技术/NAT64前缀.png)
+![命令](../imgs/IPV6过渡技术/NAT64前缀.png)
 
 实验配置
 
-![命令](../imgs/IPv6过渡技术/NAT64.png)
+![命令](../imgs/IPV6过渡技术/NAT64.png)
 
 
 
-![命令](../imgs/IPv6过渡技术/验证NET64.png)
+![命令](../imgs/IPV6过渡技术/验证NET64.png)
 
 ----------------------------------------------------------------------------------------------------------------------------
