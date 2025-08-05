@@ -176,6 +176,13 @@ Qos仅在网络拥塞时生效
 #### 流量分类方法
 
 1. 简单流分类
+  - 基于QOS标签进行分类
+  
+```bash
+traffic classifier SHIYU
+  if-match dscp cs2
+```
+
 2. 复杂流分类
 - 基于ACL
 - 基于入接口
